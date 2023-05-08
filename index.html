@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- box-icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link id = "styleLink" rel = "stylesheet" href="css/darkStyle.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id = "menu-icon"></i>
+
+        <div class="navbarAndSwitch">
+            <nav class="navbar">
+                <a href="#home" class="active">Главная</a>
+                <a href="#about">Про меня</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="switch">
+                <input type = "checkbox" id = "toggle" name = "toggle" value = "is_on">
+                <label for = "toggle" class="toy-toggle">
+                    <span class="border1"></span>
+                    <span class="border2"></span>
+                    <span class="border3"></span>
+                    <span class="handle">
+                        <span class="handle-off"></span>
+                        <span class="handle-on"></span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Привет, это я</h3>
+            <h1>Газиев Алимжан</h1>
+            <h3>Я являюсь <span class="multiple-text"></span></h3>
+
+            <div class="social-media">
+                <a href="https://www.instagram.com/alim_gaziev_"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/alimzhan-gaziev-5b4830244/"><i class='bx bxl-linkedin' ></i></a>
+                <a href="mailto:muxa1980.MG@gmail.com"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://github.com/Alimfor"><i class='bx bxl-github' ></i></a>
+            </div>
+            <a href="Resume/Газиев Алимжан.pdf" download class="btn">Скачать резюме</a>
+        </div>
+
+        <div class="home-img">
+            <img src="images/home.png" alt="">
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/About.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">Про <span>меня</span></h2>
+            <h3>Java/C# разработчик</h3>
+            <p>На данный момент заканчиваю обучение 2 курса в Алматинском университете энергетики и связи, 
+                по специальности - Вычислительная техника и программное обеспечение. 
+                Также дополнительно обучаюсь программированию в академии ШАГ, по курсу "Разработка программного обеспечения", который длится 2.5 года. 
+                Поступил в эту академию ровно год назад, где преобрел ...</p>
+            <a href="https://portfolioalim.my.canva.site/" class="btn">Больше</a>
+        </div>
+    </section>
+
+    <!-- Portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Последние проекты</h2>
+
+        <div class="profolio-container">
+            <div class="portfolio-box">
+                <img src="images/Portfolio1.1.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>REST-API</h4>
+                    <p>Алгоритм для подсчета прибыли за период с учетом себестоимости по FIFO</p>
+                        <a href="https://github.com/Alimfor/-REST-API-FIFO-.git"><i class='bx bx-link-external' ></i></a>
+
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/Portfolio2.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>REST-API</h4>
+                    <p>Регистрация пользователя</p>
+                        <a href="https://github.com/Alimfor/Registration.git"><i class='bx bx-link-external' ></i></a>
+
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/Portfolio3.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Site</h4>
+                    <p>Магазин мобильных телефонов</p>
+                        <a href="https://github.com/Alimfor/PhoneShopSite.git"><i class='bx bx-link-external' ></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Свяжитесь <span>со мной!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="ФИО">
+                <input type="email" placeholder="Почта">
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Мобильный телефон">
+                <input type="text" placeholder="Тема письма">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+            <!-- <input type="submit" value="Отправить сообщение" class="btn"> -->
+        </form>
+    </section>
+
+    <!-- footet design -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Alim | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+
+    <!-- custom js -->
+    <script src="script/script.js"></script>
+</body>
+</html>
