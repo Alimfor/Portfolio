@@ -549,7 +549,7 @@ span {
 
     .navbarAndSwitch {
         width: 70%;
-        justify-content: flex-end;
+        justify-content: space-around;
     }
 
     .navbarAndSwitch .switch {
