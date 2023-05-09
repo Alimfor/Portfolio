@@ -496,7 +496,7 @@ span {
 @media (max-width: 1300px) {
     .navbarAndSwitch {
         width: 70%;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 }
 
