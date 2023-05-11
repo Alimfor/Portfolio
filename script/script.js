@@ -74,10 +74,9 @@ window.onscroll = () => {
         $("#phone").mask("+7 (999) 999-99-99"); 
 
        jQuery('#send-form').click( function() {
-           var form = jQuery(this).closest('form');
+           var form = jQuery(this).closest('#form');
            
-           if ( form.valid() ) {
-               //form.css('opacity','.5');
+           if ( '#form'.valid() ) {
                var actUrl = form.attr('action');
    
                jQuery.ajax({
@@ -85,9 +84,7 @@ window.onscroll = () => {
                    type: 'post',
                    dataType: 'html',
                    data: form.serialize(),
-                   success: function(data) {
-                    //    form.html(data);
-                    //    form.css('opacity','1');
+                   success: function() {
                        form.find('.status').html('форма отправлена успешно');
                    },
                    error:	 function() {
@@ -96,6 +93,4 @@ window.onscroll = () => {
                });
            }
        });
-   
-   
-   });
+    });

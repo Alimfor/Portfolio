@@ -419,9 +419,6 @@ span {
     color: var(--second-bg-color);
 }
 
-form input.error{
-    border-color:red;
-}
 form label.error{
     display: none!important;
 }
