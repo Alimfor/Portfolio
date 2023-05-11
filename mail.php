@@ -1,32 +1,38 @@
 <?php
-header("Access-Control-Allow-Origin:*");
-header("Access-Control-Allow-Credentials:true");
-header("Access-Control-Max-Age: 100000");
-header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
-header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE");
+// Проверяем, что запрос отправлен методом POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-// Exit early so the page isn't fully loaded for options requests
-if (strtolower($_SERVER['REQUEST_METHOD']) == 'options') {
-    exit();
+    // Получаем данные из формы
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = isset($_POST["phone"]) ? $_POST["phone"] : '';
+    $subject = isset($_POST["subject"]) ? $_POST["subject"] : 'Без темы';
+    $message = $_POST["message"];
+
+    // Проверяем, что все обязательные поля заполнены
+    if (!empty($name) && !empty($email) && !empty($message)) {
+
+        // Устанавливаем заголовки для отправки письма
+        $to = "example@mail.com"; // Адрес, на который будет отправлено письмо
+        $headers = "From: " . $email . "\r\n" .
+            "Reply-To: " . $email . "\r\n" .
+            "X-Mailer: PHP/" . phpversion();
+
+        // Формируем тело письма
+        $body = "Имя: " . $name . "\n" .
+            "Email: " . $email . "\n" .
+            "Телефон: " . $phone . "\n\n" .
+            "Сообщение:\n" . $message;
+
+        // Отправляем письмо
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Сообщение успешно отправлено!";
+        } else {
+            echo "Произошла ошибка при отправке сообщения.";
+        }
+
+    } else {
+        echo "Пожалуйста, заполните все обязательные поля.";
+    }
 }
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-	$phone = $_POST['phone'];
-    $subjectM = $_POST['subject'];
-    $message = $_POST['message'];
-
-	$to = "muxa1980.mg@gmail.com"; 
-	$date = date ("d.m.Y"); 
-	$time = date ("h:i");
-	$from = $email;
-	$subject = "Заявка c сайта: $subjectM";
-
-	
-	$msg="
-    ФИО: $name \n
-    Телефон: $phone \n
-    Почта: $email \n
-    Текст: $message"; 	
-	mail($to, $subject, $msg, "From: $from ");
-
 ?>

@@ -76,7 +76,7 @@ window.onscroll = () => {
           event.preventDefault(); // отменяем стандартное поведение формы
       
           var form = jQuery(this);
-          if (form.valid()) {
+          if (form.checkValidity()) {
             var actUrl = form.attr('action');
             jQuery.ajax({
               url: actUrl,
@@ -86,7 +86,8 @@ window.onscroll = () => {
               success: function() {
                 form.find('.status').html('форма отправлена успешно');
                 console.log('Данные формы:', form.serialize()); // выводим данные в консоль
-              },
+                location.reload();
+            },
               error: function() {
                 form.find('.status').html('серверная ошибка');
               }
