@@ -264,7 +264,10 @@ section{
     margin-bottom: 2rem;
 }
 
-.home-content p {font-size: 1.6rem;}
+.home-content p {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
 span {
     color: var(--main-color);
 }
