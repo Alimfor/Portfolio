@@ -72,27 +72,27 @@ window.onscroll = () => {
     jQuery(document).ready(function () {
         $("#phone").mask("+7 (999) 999-99-99");
       
-        jQuery('#form').submit(function(event) {
-          event.preventDefault(); // отменяем стандартное поведение формы
+        // jQuery('#form').submit(function(event) {
+        //   event.preventDefault(); // отменяем стандартное поведение формы
       
-          var form = jQuery(this);
-          if (form.checkValidity()) {
-            var actUrl = form.attr('action');
-            jQuery.ajax({
-              url: actUrl,
-              type: 'post',
-              dataType: 'html',
-              data: form.serialize(),
-              success: function() {
-                form.find('.status').html('форма отправлена успешно');
-                console.log('Данные формы:', form.serialize()); // выводим данные в консоль
-                location.reload();
-            },
-              error: function() {
-                form.find('.status').html('серверная ошибка');
-              }
-            });
-          }
-        });
+        //   var form = jQuery(this);
+        //   if (form.checkValidity()) {
+        //     var actUrl = form.attr('action');
+        //     jQuery.ajax({
+        //       url: actUrl,
+        //       type: 'post',
+        //       dataType: 'html',
+        //       data: form.serialize(),
+        //       success: function() {
+        //         form.find('.status').html('форма отправлена успешно');
+        //         console.log('Данные формы:', form.serialize()); // выводим данные в консоль
+        //         location.reload();
+        //     },
+        //       error: function() {
+        //         form.find('.status').html('серверная ошибка');
+        //       }
+        //     });
+        //   }
+        // });
       });
       
