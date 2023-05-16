@@ -24,7 +24,9 @@ html{
 }
 
 body{
+    overflow-x: hidden;
     background: var(--bg-color);
+    color: var(--text-color);
 }
 
 section{
@@ -507,7 +509,7 @@ span {
 @media (max-width: 1300px) {
     .navbarAndSwitch {
         width: 70%;
-        justify-content: space-evenly;
+        justify-content: right;
     }
 }
 
@@ -520,10 +522,6 @@ span {
 @media (max-width: 980px){
     .header{
         padding: 2rem 3%;
-    }
-
-    .navbarAndSwitch {
-        width: 70%;
     }
 
     section{
@@ -550,11 +548,6 @@ span {
 
     .home-content {
         width: 100%;
-    }
-    
-    .navbarAndSwitch {
-        width: 70%;
-        justify-content: space-around;
     }
 
     .navbarAndSwitch .switch {
