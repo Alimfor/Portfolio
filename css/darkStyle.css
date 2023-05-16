@@ -606,20 +606,24 @@ form label.error{
         flex-direction: column-reverse;
     }
     .about img {
-        width: 70vw;
-        margin-top: 4rem;
+        display: none;
+        /* width: 70vw;
+        margin-top: 4rem; */
     }
     .portfolio h2 {
         margin-bottom: 3rem;
     }
-    .profolio-container {
-        grid-template-columns: repeat(2,1fr);
-    }
+        .profolio-container {
+            grid-template-columns: 1fr;
+        }
 }
 
 @media (max-width: 617px) {
-    .profolio-container {
-        grid-template-columns: 1fr;
+    .portfolio-box {
+        width: 100%;
+    }
+    .portfolio-box img{
+        width: 100%;
     }
 }
 
